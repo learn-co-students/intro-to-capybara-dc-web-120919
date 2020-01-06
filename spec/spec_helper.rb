@@ -18,3 +18,10 @@ end
 
 # Configure Capybara to test against the application above.
 Capybara.app = app
+
+describe "GET '/' - Greeting Form" do 
+  it 'welcomes the user' do 
+    visit '/' #new capybara method, as well as page
+      expect(page.body).to include('Welcome!')
+  end 
+end 
